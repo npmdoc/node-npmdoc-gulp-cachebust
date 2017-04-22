@@ -1,4 +1,7 @@
-# api documentation for  [gulp-cachebust (v0.0.6)](https://github.com/Josiah/gulp-cachebust#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-cachebust.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-cachebust) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-cachebust.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-cachebust)
+# npmdoc-gulp-cachebust
+
+#### api documentation for  [gulp-cachebust (v0.0.6)](https://github.com/Josiah/gulp-cachebust#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-cachebust.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-cachebust) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-cachebust.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-cachebust)
+
 #### Generates checksums and renames references to files, useful for cachebusting
 
 [![NPM](https://nodei.co/npm/gulp-cachebust.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-cachebust)
@@ -51,7 +54,8 @@
         "url": "git+ssh://git@github.com/Josiah/gulp-cachebust.git"
     },
     "scripts": {},
-    "version": "0.0.6"
+    "version": "0.0.6",
+    "bin": {}
 }
 ```
 
