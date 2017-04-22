@@ -72,8 +72,76 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.gulp-cachebust.toString">
-            function <span class="apidocSignatureSpan">gulp-cachebust.</span>toString
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-cachebust.index">
+            function <span class="apidocSignatureSpan">gulp-cachebust.</span>index
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp-cachebust.</span>index.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-cachebust.index">module gulp-cachebust.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-cachebust.index.index">
+            function <span class="apidocSignatureSpan">gulp-cachebust.</span>index
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-cachebust.index.prototype">module gulp-cachebust.index.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-cachebust.index.prototype.getBustedPath">
+            function <span class="apidocSignatureSpan">gulp-cachebust.index.prototype.</span>getBustedPath
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-cachebust.index.prototype.getChecksum">
+            function <span class="apidocSignatureSpan">gulp-cachebust.index.prototype.</span>getChecksum
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-cachebust.index.prototype.getRelativeMappings">
+            function <span class="apidocSignatureSpan">gulp-cachebust.index.prototype.</span>getRelativeMappings
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-cachebust.index.prototype.references">
+            function <span class="apidocSignatureSpan">gulp-cachebust.index.prototype.</span>references
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-cachebust.index.prototype.resources">
+            function <span class="apidocSignatureSpan">gulp-cachebust.index.prototype.</span>resources
             <span class="apidocSignatureSpan">()</span>
             </a>
 
@@ -114,31 +182,296 @@
 
 
     <h2>
-        <a href="#apidoc.element.gulp-cachebust.toString" id="apidoc.element.gulp-cachebust.toString">
-        function <span class="apidocSignatureSpan">gulp-cachebust.</span>toString
+        <a href="#apidoc.element.gulp-cachebust.index" id="apidoc.element.gulp-cachebust.index">
+        function <span class="apidocSignatureSpan">gulp-cachebust.</span>index
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CacheBuster(options) {
+    if (!(this instanceof CacheBuster)) {
+        return new CacheBuster(options);
+    }
+
+    this.checksumLength = (options &#x26;&#x26; options.checksumLength) || 8;
+    this.random = (options &#x26;&#x26; options.random) || false;
+    if (this.random) {
+        var shasum = crypto.createHash(&#x27;sha1&#x27;);
+        shasum.update(crypto.randomBytes(50).toString());
+        this.hash =  shasum.digest(&#x27;hex&#x27;).substr(0, this.checksumLength);
+    }
+    this.mappings = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-cachebust.index" id="apidoc.module.gulp-cachebust.index">module gulp-cachebust.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-cachebust.index.index" id="apidoc.element.gulp-cachebust.index.index">
+        function <span class="apidocSignatureSpan">gulp-cachebust.</span>index
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CacheBuster(options) {
+    if (!(this instanceof CacheBuster)) {
+        return new CacheBuster(options);
+    }
+
+    this.checksumLength = (options &#x26;&#x26; options.checksumLength) || 8;
+    this.random = (options &#x26;&#x26; options.random) || false;
+    if (this.random) {
+        var shasum = crypto.createHash(&#x27;sha1&#x27;);
+        shasum.update(crypto.randomBytes(50).toString());
+        this.hash =  shasum.digest(&#x27;hex&#x27;).substr(0, this.checksumLength);
+    }
+    this.mappings = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-cachebust.index.prototype" id="apidoc.module.gulp-cachebust.index.prototype">module gulp-cachebust.index.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-cachebust.index.prototype.getBustedPath" id="apidoc.element.gulp-cachebust.index.prototype.getBustedPath">
+        function <span class="apidocSignatureSpan">gulp-cachebust.index.prototype.</span>getBustedPath
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getBustedPath(file) {
+    var checksum = this.random ? this.hash : this.getChecksum(file);
+
+    if (!checksum) {
+        return file.path;
+    }
+
+    var extname = path.extname(file.path);
+    var basename = path.basename(file.path, extname);
+    var dirname = path.dirname(file.path);
+
+    var str = path.join(dirname, basename + &#x27;.&#x27; + checksum + extname);
+    return slash(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return mappings;
+};
+
+CacheBuster.prototype.resources = function resources() {
+    var cachebuster = this;
+
+    return through2.obj(function transform(file, encoding, callback) {
+var bustedPath = cachebuster.<span class="apidocCodeKeywordSpan">getBustedPath</span>(file);
+
+if (file.path === bustedPath) {
+    this.push(file);
+    return callback();
+}
+
+var original = slash(file.relative);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-cachebust.index.prototype.getChecksum" id="apidoc.element.gulp-cachebust.index.prototype.getChecksum">
+        function <span class="apidocSignatureSpan">gulp-cachebust.index.prototype.</span>getChecksum
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getChecksum(file) {
+    var hash = crypto.createHash(&#x27;md5&#x27;);
+
+    if (file.isNull()) {
+        return;
+    }
+
+    if (file.isStream()) {
+        file.pipe(hash);
+        hash.end();
+    }
+
+    if (file.isBuffer()) {
+        hash.end(file.contents);
+    }
+
+    return hash.read().toString(&#x27;hex&#x27;).substr(0, this.checksumLength);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    hash.end(file.contents);
+}
+
+return hash.read().toString(&#x27;hex&#x27;).substr(0, this.checksumLength);
+}
+
+CacheBuster.prototype.getBustedPath = function getBustedPath(file) {
+var checksum = this.random ? this.hash : this.<span class="apidocCodeKeywordSpan">getChecksum</span>(file);
+
+if (!checksum) {
+    return file.path;
+}
+
+var extname = path.extname(file.path);
+var basename = path.basename(file.path, extname);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-cachebust.index.prototype.getRelativeMappings" id="apidoc.element.gulp-cachebust.index.prototype.getRelativeMappings">
+        function <span class="apidocSignatureSpan">gulp-cachebust.index.prototype.</span>getRelativeMappings
         <span class="apidocSignatureSpan">()</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
+    <li>description and source-code<pre class="apidocCodePre">function getRelativeMappings() {
+    var mappings = [];
+
+    for (var original in this.mappings) {
+        var cachebusted = this.mappings[original];
+
+        mappings.push({original: original, cachebusted: cachebusted});
+    }
+
+    return mappings;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    return new CacheBuster(options);
+    this.emit(&#x27;error&#x27;, new PluginError(&#x27;gulp-cachebust&#x27;, &#x27;Non buffer files are not supported for reference
+ rewrites.&#x27;));
+    this.push(file);
+    return callback();
 }
 
-this.checksumLength = (options &#x26;&#x26; options.checksumLength) || 8;
-this.random = (options &#x26;&#x26; options.random) || false;
-if (this.random) {
-    var shasum = crypto.createHash(&#x27;sha1&#x27;);
-    shasum.update(crypto.randomBytes(50).<span class="apidocCodeKeywordSpan">toString</span>());
-    this.hash =  shasum.digest(&#x27;hex&#x27;).substr(0, this.checksumLength);
-}
-this.mappings = {};
-}
+var contents = file.contents.toString(encoding);
 
-CacheBuster.prototype.getChecksum = function getChecksum(file) {
-var hash = crypto.createHash(&#x27;md5&#x27;);
+var mappings = cachebuster.<span class="apidocCodeKeywordSpan">getRelativeMappings</span>(file.path);
+for (var i=0; i &#x3c; mappings.length; i++) {
+    var original = mappings[i].original;
+    var cachebusted = mappings[i].cachebusted;
+
+    contents = contents.replace(new RegExp(&#x27;\\b&#x27; + original + &#x27;(?!\\.)\\b&#x27;, &#x27;g&#x27;), cachebusted);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-cachebust.index.prototype.references" id="apidoc.element.gulp-cachebust.index.prototype.references">
+        function <span class="apidocSignatureSpan">gulp-cachebust.index.prototype.</span>references
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function references() {
+    var cachebuster = this;
+
+    return through2.obj(function transform(file, encoding, callback) {
+        if (file.isNull()) {
+            this.push(file);
+            return callback();
+        }
+
+        if (!file.isBuffer()) {
+            this.emit(&#x27;error&#x27;, new PluginError(&#x27;gulp-cachebust&#x27;, &#x27;Non buffer files are not supported for reference rewrites.&#x27;));
+            this.push(file);
+            return callback();
+        }
+
+        var contents = file.contents.toString(encoding);
+
+        var mappings = cachebuster.getRelativeMappings(file.path);
+        for (var i=0; i &#x3c; mappings.length; i++) {
+            var original = mappings[i].original;
+            var cachebusted = mappings[i].cachebusted;
+
+            contents = contents.replace(new RegExp(&#x27;\\b&#x27; + original + &#x27;(?!\\.)\\b&#x27;, &#x27;g&#x27;), cachebusted);
+        }
+
+        file.contents = new Buffer(contents, encoding);
+        this.push(file);
+        return callback();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        .pipe(cachebust.resources())
+        .pipe(gulp.dest(&#x27;dist/css&#x27;));
+});
+
+gulp.task(&#x27;build-html&#x27;, [&#x27;build-css&#x27;], function () {
+    return gulp.src(&#x27;templates/*&#x27;)
+        // Awesome html stuff
+        .pipe(cachebust.<span class="apidocCodeKeywordSpan">references</span>())
+        .pipe(gulp.dest(&#x27;dist&#x27;));
+});
+```
+
+
+## API
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-cachebust.index.prototype.resources" id="apidoc.element.gulp-cachebust.index.prototype.resources">
+        function <span class="apidocSignatureSpan">gulp-cachebust.index.prototype.</span>resources
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function resources() {
+    var cachebuster = this;
+
+    return through2.obj(function transform(file, encoding, callback) {
+        var bustedPath = cachebuster.getBustedPath(file);
+
+        if (file.path === bustedPath) {
+            this.push(file);
+            return callback();
+        }
+
+        var original = slash(file.relative);
+        file.path = bustedPath;
+
+        cachebuster.mappings[original] = slash(file.relative);
+
+        this.push(file);
+        return callback();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var CacheBuster = require(&#x27;gulp-cachebust&#x27;);
+
+var cachebust = new CacheBuster();
+
+gulp.task(&#x27;build-css&#x27;, function () {
+return gulp.src(&#x27;styles/*.css&#x27;)
+    // Awesome css stuff
+    .pipe(cachebust.<span class="apidocCodeKeywordSpan">resources</span>())
+    .pipe(gulp.dest(&#x27;dist/css&#x27;));
+});
+
+gulp.task(&#x27;build-html&#x27;, [&#x27;build-css&#x27;], function () {
+return gulp.src(&#x27;templates/*&#x27;)
+    // Awesome html stuff
+    .pipe(cachebust.references())
 ...</pre></li>
     </ul>
 
